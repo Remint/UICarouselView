@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		782AAA92145FCEF100B4A7B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782AAA91145FCEF100B4A7B3 /* UIKit.framework */; };
+		782AAA94145FCEF100B4A7B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782AAA93145FCEF100B4A7B3 /* Foundation.framework */; };
+		782AAA96145FCEF100B4A7B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782AAA95145FCEF100B4A7B3 /* CoreGraphics.framework */; };
+		782AAA9C145FCEF100B4A7B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 782AAA9A145FCEF100B4A7B3 /* InfoPlist.strings */; };
+		782AAA9E145FCEF100B4A7B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAA9D145FCEF100B4A7B3 /* main.m */; };
+		782AAAA2145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAAA1145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m */; };
+		782AAAA5145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAAA4145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m */; };
+		782AAAA8145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782AAAA6145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib */; };
+		782AAAAB145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782AAAA9145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		782AAA8D145FCEF100B4A7B3 /* UICarouselViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICarouselViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		782AAA91145FCEF100B4A7B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		782AAA93145FCEF100B4A7B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		782AAA95145FCEF100B4A7B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		782AAA99145FCEF100B4A7B3 /* UICarouselViewDemo-Info.plist */ = {isa = PBXFileReference; path = "UICarouselViewDemo-Info.plist"; sourceTree = "<group>"; };
+		782AAA9B145FCEF100B4A7B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		782AAA9D145FCEF100B4A7B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		782AAA9F145FCEF100B4A7B3 /* UICarouselViewDemo-Prefix.pch */ = {isa = PBXFileReference; path = "UICarouselViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		782AAAA0145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.h */ = {isa = PBXFileReference; path = UICarouselViewDemoAppDelegate.h; sourceTree = "<group>"; };
+		782AAAA1145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICarouselViewDemoAppDelegate.m; sourceTree = "<group>"; };
+		782AAAA3145FCEF100B4A7B3 /* UICarouselViewDemoViewController.h */ = {isa = PBXFileReference; path = UICarouselViewDemoViewController.h; sourceTree = "<group>"; };
+		782AAAA4145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICarouselViewDemoViewController.m; sourceTree = "<group>"; };
+		782AAAA7145FCEF100B4A7B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UICarouselViewDemoViewController_iPhone.xib; sourceTree = "<group>"; };
+		782AAAAA145FCEF100B4A7B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UICarouselViewDemoViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		782AAA8A145FCEF100B4A7B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782AAA92145FCEF100B4A7B3 /* UIKit.framework in Frameworks */,
+				782AAA94145FCEF100B4A7B3 /* Foundation.framework in Frameworks */,
+				782AAA96145FCEF100B4A7B3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		782AAA82145FCEF100B4A7B3 = {
+			isa = PBXGroup;
+			children = (
+				782AAA97145FCEF100B4A7B3 /* UICarouselViewDemo */,
+				782AAA90145FCEF100B4A7B3 /* Frameworks */,
+				782AAA8E145FCEF100B4A7B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		782AAA8E145FCEF100B4A7B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				782AAA8D145FCEF100B4A7B3 /* UICarouselViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		782AAA90145FCEF100B4A7B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				782AAA91145FCEF100B4A7B3 /* UIKit.framework */,
+				782AAA93145FCEF100B4A7B3 /* Foundation.framework */,
+				782AAA95145FCEF100B4A7B3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		782AAA97145FCEF100B4A7B3 /* UICarouselViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				782AAAA0145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.h */,
+				782AAAA1145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m */,
+				782AAAA3145FCEF100B4A7B3 /* UICarouselViewDemoViewController.h */,
+				782AAAA4145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m */,
+				782AAAA6145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib */,
+				782AAAA9145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib */,
+				782AAA98145FCEF100B4A7B3 /* Supporting Files */,
+			);
+			path = UICarouselViewDemo;
+			sourceTree = "<group>";
+		};
+		782AAA98145FCEF100B4A7B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				782AAA99145FCEF100B4A7B3 /* UICarouselViewDemo-Info.plist */,
+				782AAA9A145FCEF100B4A7B3 /* InfoPlist.strings */,
+				782AAA9D145FCEF100B4A7B3 /* main.m */,
+				782AAA9F145FCEF100B4A7B3 /* UICarouselViewDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		782AAA8C145FCEF100B4A7B3 /* UICarouselViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782AAAAE145FCEF100B4A7B3 /* Build configuration list for PBXNativeTarget "UICarouselViewDemo" */;
+			buildPhases = (
+				782AAA89145FCEF100B4A7B3 /* Sources */,
+				782AAA8A145FCEF100B4A7B3 /* Frameworks */,
+				782AAA8B145FCEF100B4A7B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICarouselViewDemo;
+			productName = UICarouselViewDemo;
+			productReference = 782AAA8D145FCEF100B4A7B3 /* UICarouselViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		782AAA84145FCEF100B4A7B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 782AAA87145FCEF100B4A7B3 /* Build configuration list for PBXProject "UICarouselViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 782AAA82145FCEF100B4A7B3;
+			productRefGroup = 782AAA8E145FCEF100B4A7B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				782AAA8C145FCEF100B4A7B3 /* UICarouselViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		782AAA8B145FCEF100B4A7B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782AAA9C145FCEF100B4A7B3 /* InfoPlist.strings in Resources */,
+				782AAAA8145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib in Resources */,
+				782AAAAB145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		782AAA89145FCEF100B4A7B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782AAA9E145FCEF100B4A7B3 /* main.m in Sources */,
+				782AAAA2145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m in Sources */,
+				782AAAA5145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		782AAA9A145FCEF100B4A7B3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				782AAA9B145FCEF100B4A7B3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		782AAAA6145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				782AAAA7145FCEF100B4A7B3 /* en */,
+			);
+			name = UICarouselViewDemoViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		782AAAA9145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				782AAAAA145FCEF100B4A7B3 /* en */,
+			);
+			name = UICarouselViewDemoViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		782AAAAC145FCEF100B4A7B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		782AAAAD145FCEF100B4A7B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		782AAAAF145FCEF100B4A7B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UICarouselViewDemo/UICarouselViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "UICarouselViewDemo/UICarouselViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		782AAAB0145FCEF100B4A7B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UICarouselViewDemo/UICarouselViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "UICarouselViewDemo/UICarouselViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		782AAA87145FCEF100B4A7B3 /* Build configuration list for PBXProject "UICarouselViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782AAAAC145FCEF100B4A7B3 /* Debug */,
+				782AAAAD145FCEF100B4A7B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782AAAAE145FCEF100B4A7B3 /* Build configuration list for PBXNativeTarget "UICarouselViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782AAAAF145FCEF100B4A7B3 /* Debug */,
+				782AAAB0145FCEF100B4A7B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 782AAA84145FCEF100B4A7B3 /* Project object */;
+}
