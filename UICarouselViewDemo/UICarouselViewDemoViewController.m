@@ -56,6 +56,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.dataSourceArray = [NSMutableArray arrayWithCapacity:32];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) carouselView.columnWidth = 107.0f;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateLabels) userInfo:nil repeats:YES];
 }
 
@@ -93,7 +94,7 @@
 {
     // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
     } else {
         return YES;
     }

@@ -177,6 +177,7 @@ static float ANIMATION_SPEED = 0.3f;
 
 - (void)reloadData
 {
+    indexOfSelectedCell = -1;
     if (dataSource == nil) return;
     if ([dataSource respondsToSelector:@selector(numberOfColumnsForCarouselView:)] == NO 
         || [dataSource respondsToSelector:@selector(carouselView:cellForColumnAtIndex:)] == NO) 
@@ -434,7 +435,9 @@ static float ANIMATION_SPEED = 0.3f;
     
     NSMutableArray *animatedCells = [NSMutableArray arrayWithCapacity:allocatedCells.count];
     for (NSNumber *indexNum in indexes) {
-        UICarouselViewCell *cell = [self visibleCellForIndex:[indexNum intValue]];
+        NSUInteger index = [indexNum intValue];
+        if (indexOfSelectedCell == index) indexOfSelectedCell = -1;
+        UICarouselViewCell *cell = [self visibleCellForIndex:index];
         if (cell != nil) [animatedCells addObject:cell];
     }
     
@@ -499,7 +502,7 @@ static float ANIMATION_SPEED = 0.3f;
     if (indexOfSelectedCell != -1) {
         
         UICarouselViewCell *previousSelectedCell = [self visibleCellForIndex:indexOfSelectedCell];
-        if ([delegate respondsToSelector:@selector(carouselView:didDeselectRowAtIndex:)])
+        if ([delegate respondsToSelector:@selector(carouselView:didDeselectCellAtIndex:)])
             [delegate carouselView:self didDeselectCellAtIndex:indexOfSelectedCell];
         if (previousSelectedCell != nil) [previousSelectedCell setSelected:NO animated:NO];
         indexOfSelectedCell = -1;
