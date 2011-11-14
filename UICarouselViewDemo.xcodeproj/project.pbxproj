@@ -16,8 +16,8 @@
 		782AAAA5145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAAA4145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m */; };
 		782AAAA8145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782AAAA6145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPhone.xib */; };
 		782AAAAB145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782AAAA9145FCEF100B4A7B3 /* UICarouselViewDemoViewController_iPad.xib */; };
-		782AAAB3145FCF6300B4A7B3 /* UICarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAAB2145FCF6300B4A7B3 /* UICarouselViewCell.m */; };
-		782AAAB6145FCFBD00B4A7B3 /* UICarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 782AAAB5145FCFBD00B4A7B3 /* UICarouselView.m */; };
+		787C77E51471237F00370387 /* UICarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C77E21471237F00370387 /* UICarouselView.m */; };
+		787C77E61471237F00370387 /* UICarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C77E41471237F00370387 /* UICarouselViewCell.m */; };
 		78B29218146A7DB50089433B /* CustomCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B29217146A7DB50089433B /* CustomCarouselViewCell.m */; };
 		78B2921B146A7EF40089433B /* CustomCarouselViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B2921A146A7EF40089433B /* CustomCarouselViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -37,10 +37,10 @@
 		782AAAA4145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICarouselViewDemoViewController.m; sourceTree = "<group>"; };
 		782AAAA7145FCEF100B4A7B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UICarouselViewDemoViewController_iPhone.xib; sourceTree = "<group>"; };
 		782AAAAA145FCEF100B4A7B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UICarouselViewDemoViewController_iPad.xib; sourceTree = "<group>"; };
-		782AAAB1145FCF6300B4A7B3 /* UICarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICarouselViewCell.h; sourceTree = "<group>"; };
-		782AAAB2145FCF6300B4A7B3 /* UICarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICarouselViewCell.m; sourceTree = "<group>"; };
-		782AAAB4145FCFBD00B4A7B3 /* UICarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICarouselView.h; sourceTree = "<group>"; };
-		782AAAB5145FCFBD00B4A7B3 /* UICarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICarouselView.m; sourceTree = "<group>"; };
+		787C77E11471237F00370387 /* UICarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICarouselView.h; sourceTree = "<group>"; };
+		787C77E21471237F00370387 /* UICarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICarouselView.m; sourceTree = "<group>"; };
+		787C77E31471237F00370387 /* UICarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICarouselViewCell.h; sourceTree = "<group>"; };
+		787C77E41471237F00370387 /* UICarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICarouselViewCell.m; sourceTree = "<group>"; };
 		78B29216146A7DB50089433B /* CustomCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCarouselViewCell.h; sourceTree = "<group>"; };
 		78B29217146A7DB50089433B /* CustomCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCarouselViewCell.m; sourceTree = "<group>"; };
 		78B2921A146A7EF40089433B /* CustomCarouselViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCarouselViewCell.xib; sourceTree = "<group>"; };
@@ -90,10 +90,7 @@
 		782AAA97145FCEF100B4A7B3 /* UICarouselViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				782AAAB1145FCF6300B4A7B3 /* UICarouselViewCell.h */,
-				782AAAB2145FCF6300B4A7B3 /* UICarouselViewCell.m */,
-				782AAAB4145FCFBD00B4A7B3 /* UICarouselView.h */,
-				782AAAB5145FCFBD00B4A7B3 /* UICarouselView.m */,
+				787C77E01471237F00370387 /* UICarouselView */,
 				782AAAA0145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.h */,
 				782AAAA1145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m */,
 				78B29216146A7DB50089433B /* CustomCarouselViewCell.h */,
@@ -117,6 +114,17 @@
 				782AAA9F145FCEF100B4A7B3 /* UICarouselViewDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		787C77E01471237F00370387 /* UICarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				787C77E11471237F00370387 /* UICarouselView.h */,
+				787C77E21471237F00370387 /* UICarouselView.m */,
+				787C77E31471237F00370387 /* UICarouselViewCell.h */,
+				787C77E41471237F00370387 /* UICarouselViewCell.m */,
+			);
+			path = UICarouselView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +194,9 @@
 				782AAA9E145FCEF100B4A7B3 /* main.m in Sources */,
 				782AAAA2145FCEF100B4A7B3 /* UICarouselViewDemoAppDelegate.m in Sources */,
 				782AAAA5145FCEF100B4A7B3 /* UICarouselViewDemoViewController.m in Sources */,
-				782AAAB3145FCF6300B4A7B3 /* UICarouselViewCell.m in Sources */,
-				782AAAB6145FCFBD00B4A7B3 /* UICarouselView.m in Sources */,
 				78B29218146A7DB50089433B /* CustomCarouselViewCell.m in Sources */,
+				787C77E51471237F00370387 /* UICarouselView.m in Sources */,
+				787C77E61471237F00370387 /* UICarouselViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
