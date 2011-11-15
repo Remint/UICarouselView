@@ -19,10 +19,10 @@ typedef enum {
 } UICarouselViewColumnAnimation;
 
 typedef enum {
-    UITableViewScrollPositionNone,
-    UITableViewScrollPositionLeft,
-    UITableViewScrollPositionMiddle,
-    UITableViewScrollPositionRight
+    UICarouselViewScrollPositionNone,
+    UICarouselViewScrollPositionLeft,
+    UICarouselViewScrollPositionMiddle,
+    UICarouselViewScrollPositionRight
 } UICarouselViewScrollPosition;
 
 
@@ -72,9 +72,12 @@ typedef enum {
 - (UICarouselViewCell *)visibleCellForIndex:(NSInteger)index; //return nil if cell is not visible
 - (NSUInteger)indexForCell:(UICarouselViewCell *)cell;
 
+
+- (void)scrollToCellAtIndex:(NSUInteger)index atScrollPosition:(UICarouselViewScrollPosition)scrollPosition animated:(BOOL)animated;
+
 - (void)selectCellAtIndex:(NSUInteger)index animated:(BOOL)animated;
 - (void)deselectCellAtIndex:(NSUInteger)index animated:(BOOL)animated;
-- (void)scrollToCellAtIndex:(NSUInteger)index atScrollPosition:(UICarouselViewScrollPosition)scrollPosition animated:(BOOL)animated;
+- (void)selectCellAtIndex:(NSUInteger)index animated:(BOOL)animated scrollPosition:(UICarouselViewScrollPosition)scrollPosition;
 
 
 - (void)reloadData;

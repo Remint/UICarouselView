@@ -529,11 +529,11 @@ static float ANIMATION_SPEED = 0.3f;
 {
     CGPoint pos = CGPointMake(columnWidth * index, 0);
     switch (scrollPosition) {
-        case UITableViewScrollPositionNone: [self scrollRectToVisible:CGRectMake(pos.x, pos.y, columnWidth, self.bounds.size.height) animated:animated];
+        case UICarouselViewScrollPositionNone: [self scrollRectToVisible:CGRectMake(pos.x, pos.y, columnWidth, self.bounds.size.height) animated:animated];
             return;
-        case UITableViewScrollPositionMiddle: pos.x += self.bounds.size.width / 2.0f - columnWidth / 2.0f;
+        case UICarouselViewScrollPositionMiddle: pos.x += self.bounds.size.width / 2.0f - columnWidth / 2.0f;
             break;
-        case UITableViewScrollPositionRight: pos.x += self.bounds.size.width - columnWidth;
+        case UICarouselViewScrollPositionRight: pos.x += self.bounds.size.width - columnWidth;
             break;
     }
     [self setContentOffset:pos animated:animated];
@@ -566,6 +566,12 @@ static float ANIMATION_SPEED = 0.3f;
     UICarouselViewCell *cell = [self visibleCellForIndex:index];
     if (cell != nil) [cell setSelected:NO animated:animated];
     indexOfSelectedCell = -1;
+}
+
+- (void)selectCellAtIndex:(NSUInteger)index animated:(BOOL)animated scrollPosition:(UICarouselViewScrollPosition)scrollPosition
+{
+    [self selectCellAtIndex:index animated:animated];
+    [self scrollToCellAtIndex:index atScrollPosition:scrollPosition animated:animated];
 }
 
 
