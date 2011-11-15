@@ -515,18 +515,57 @@ static float ANIMATION_SPEED = 0.3f;
     NSUInteger index = [self indexForCell:cell];
     if (index == indexOfSelectedCell) return;
     
+    // select tapped cell 
+    UICarouselViewCell *newSelectedCell = [self visibleCellForIndex:index];
+    [newSelectedCell setSelected:YES animated:NO];
     
+    indexOfSelectedCell = index; 
     
-    if ([delegate respondsToSelector:@selector(carouselView:didSelectCellAtIndex:)]) {
-        
-        // select tapped cell 
+    if ([delegate respondsToSelector:@selector(carouselView:didSelectCellAtIndex:)]) [delegate carouselView:self didSelectCellAtIndex:index];
+}
+
+
+- (void)scrollToCellAtIndex:(NSUInteger)index atScrollPosition:(UICarouselViewScrollPosition)scrollPosition animated:(BOOL)animated
+{
+    CGPoint pos = CGPointMake(columnWidth * index, 0);
+    switch (scrollPosition) {
+        case UITableViewScrollPositionNone: [self scrollRectToVisible:CGRectMake(pos.x, pos.y, columnWidth, self.bounds.size.height) animated:animated];
+            return;
+        case UITableViewScrollPositionMiddle: pos.x += self.bounds.size.width / 2.0f - columnWidth / 2.0f;
+            break;
+        case UITableViewScrollPositionRight: pos.x += self.bounds.size.width - columnWidth;
+            break;
+    }
+    [self setContentOffset:pos animated:animated];
+}
+
+- (void)selectCellAtIndex:(NSUInteger)index animated:(BOOL)animated
+{
+    if (index == indexOfSelectedCell) return;
+    
+    if (indexOfSelectedCell != -1) {
+        UICarouselViewCell *previousSelectedCell = [self visibleCellForIndex:indexOfSelectedCell];
+        //if ([delegate respondsToSelector:@selector(carouselView:didDeselectCellAtIndex:)]) [delegate carouselView:self didDeselectCellAtIndex:indexOfSelectedCell];
+        if (previousSelectedCell != nil) [previousSelectedCell setSelected:NO animated:NO];
+    }
+    
+    UICarouselViewCell *cell = [self visibleCellForIndex:index];
+    if (cell != nil) {
         UICarouselViewCell *newSelectedCell = [self visibleCellForIndex:index];
         [newSelectedCell setSelected:YES animated:NO];
+        indexOfSelectedCell = index; 
         
-        indexOfSelectedCell = index;  
-        
-        [delegate carouselView:self didSelectCellAtIndex:index];
+        //if ([delegate respondsToSelector:@selector(carouselView:didSelectCellAtIndex:)]) [delegate carouselView:self didSelectCellAtIndex:index];
     }
+    indexOfSelectedCell = index;
+}
+
+- (void)deselectCellAtIndex:(NSUInteger)index animated:(BOOL)animated
+{
+    if (index != indexOfSelectedCell) return;
+    UICarouselViewCell *cell = [self visibleCellForIndex:index];
+    if (cell != nil) [cell setSelected:NO animated:animated];
+    indexOfSelectedCell = -1;
 }
 
 
