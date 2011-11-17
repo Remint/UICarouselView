@@ -63,6 +63,8 @@ typedef enum {
 @property (nonatomic, retain) NSMutableSet *reusablePool;
 @property (nonatomic, readonly) NSUInteger numberOfColumns;
 
+- (void)releaseCells; //release cells from reusablePool & allocatedCells
+
 - (UICarouselViewCell *)dequeueReusableCell;
 
 - (void)insertColumnsAtIndexes:(NSArray *)indexes withColumnAnimation:(UICarouselViewColumnAnimation)animation;
@@ -81,5 +83,6 @@ typedef enum {
 
 
 - (void)reloadData;
+
 
 @end

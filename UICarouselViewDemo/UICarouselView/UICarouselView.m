@@ -175,6 +175,17 @@ static float ANIMATION_SPEED = 0.3f;
     return cell;
 }
 
+- (void)releaseCells
+{
+    numberOfColumns = NSUIntegerMax;
+    allocatedCellsRange.location = 0;
+    allocatedCellsRange.length = 0;
+    for (UICarouselViewCell *cell in allocatedCells)  [cell removeFromSuperview];
+    [allocatedCells removeAllObjects];
+    [reusablePool removeAllObjects];
+    self.contentSize = CGSizeMake(0, 0);
+}
+
 - (void)reloadData
 {
     indexOfSelectedCell = -1;
