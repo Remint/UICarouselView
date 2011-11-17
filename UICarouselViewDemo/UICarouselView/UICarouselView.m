@@ -513,7 +513,7 @@ static float ANIMATION_SPEED = 0.3f;
     if (indexOfSelectedCell != -1) {
         
         NSUInteger deselectedIndex = indexOfSelectedCell;
-        if ([delegate respondsToSelector:@selector(carouselView:willDeselectCellAtIndex:)) {
+        if ([delegate respondsToSelector:@selector(carouselView:willDeselectCellAtIndex:)]) {
             deselectedIndex = [delegate carouselView:self willDeselectCellAtIndex:indexOfSelectedCell];
             if (deselectedIndex == NSNotFound) return;
         }
