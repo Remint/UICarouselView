@@ -512,9 +512,15 @@ static float ANIMATION_SPEED = 0.3f;
     // deselect previous selected cell 
     if (indexOfSelectedCell != -1) {
         
-        UICarouselViewCell *previousSelectedCell = [self visibleCellForIndex:indexOfSelectedCell];
+        NSUInteger deselectedIndex = indexOfSelectedCell;
+        if ([delegate respondsToSelector:@selector(carouselView:willDeselectCellAtIndex:)) {
+            deselectedIndex = [delegate carouselView:self willDeselectCellAtIndex:indexOfSelectedCell];
+            if (deselectedIndex == NSNotFound) return;
+        }
+        
+        UICarouselViewCell *previousSelectedCell = [self visibleCellForIndex:deselectedIndex];
         if ([delegate respondsToSelector:@selector(carouselView:didDeselectCellAtIndex:)])
-            [delegate carouselView:self didDeselectCellAtIndex:indexOfSelectedCell];
+            [delegate carouselView:self didDeselectCellAtIndex:deselectedIndex];
         if (previousSelectedCell != nil) [previousSelectedCell setSelected:NO animated:NO];
         indexOfSelectedCell = -1;
     }
@@ -524,8 +530,14 @@ static float ANIMATION_SPEED = 0.3f;
 - (void)cellTouchUpInside:(UICarouselViewCell *)cell {
     
     NSUInteger index = [self indexForCell:cell];
-    if (index == indexOfSelectedCell) return;
     
+    
+    if ([delegate respondsToSelector:@selector(carouselView:willSelectCellAtIndex:)]) {
+        index = [delegate carouselView:self willSelectCellAtIndex:index];
+        if (index == NSNotFound) return;
+    }
+    
+    if (index == indexOfSelectedCell) return;
     // select tapped cell 
     UICarouselViewCell *newSelectedCell = [self visibleCellForIndex:index];
     [newSelectedCell setSelected:YES animated:YES];
@@ -543,11 +555,14 @@ static float ANIMATION_SPEED = 0.3f;
         case UICarouselViewScrollPositionLeft: break; //XCode warnings clean up
         case UICarouselViewScrollPositionNone: [self scrollRectToVisible:CGRectMake(pos.x, pos.y, columnWidth, self.bounds.size.height) animated:animated];
             return;
-        case UICarouselViewScrollPositionMiddle: pos.x += self.bounds.size.width / 2.0f - columnWidth / 2.0f;
+        case UICarouselViewScrollPositionMiddle: pos.x -= self.bounds.size.width / 2.0f - columnWidth / 2.0f;
             break;
         case UICarouselViewScrollPositionRight: pos.x += self.bounds.size.width - columnWidth;
             break;
     }
+    if (pos.x < 0.0f) pos.x = 0.0f;
+    CGFloat leftLimit = numberOfColumns * columnWidth - self.bounds.size.width;
+    if (pos.x + self.bounds.size.width > leftLimit) pos.x = leftLimit;
     [self setContentOffset:pos animated:animated];
 }
 

@@ -28,7 +28,11 @@ typedef enum {
 
 @protocol UICarouselViewDelegate <NSObject, UIScrollViewDelegate>
 @optional
+
+- (NSUInteger)carouselView:(UICarouselView *)carouselView willSelectCellAtIndex:(NSUInteger)index; //should retung NSNotFound if selection don't wanted, otherwise return index of cell that should be selected
 - (void)carouselView:(UICarouselView *)carouselView didSelectCellAtIndex:(NSInteger)index;
+
+- (NSUInteger)carouselView:(UICarouselView *)carouselView willDeselectCellAtIndex:(NSUInteger)index; //should retung NSNotFound if deselection don't wanted, otherwise return index of cell that should be deselected
 - (void)carouselView:(UICarouselView *)carouselView didDeselectCellAtIndex:(NSInteger)index;
 
 @end
