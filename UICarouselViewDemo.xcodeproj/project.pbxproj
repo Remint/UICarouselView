@@ -119,10 +119,10 @@
 		787C77E01471237F00370387 /* UICarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				787C77E11471237F00370387 /* UICarouselView.h */,
-				787C77E21471237F00370387 /* UICarouselView.m */,
 				787C77E31471237F00370387 /* UICarouselViewCell.h */,
 				787C77E41471237F00370387 /* UICarouselViewCell.m */,
+				787C77E11471237F00370387 /* UICarouselView.h */,
+				787C77E21471237F00370387 /* UICarouselView.m */,
 			);
 			path = UICarouselView;
 			sourceTree = "<group>";

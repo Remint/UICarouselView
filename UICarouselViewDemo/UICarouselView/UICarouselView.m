@@ -528,7 +528,7 @@ static float ANIMATION_SPEED = 0.3f;
     
     // select tapped cell 
     UICarouselViewCell *newSelectedCell = [self visibleCellForIndex:index];
-    [newSelectedCell setSelected:YES animated:NO];
+    [newSelectedCell setSelected:YES animated:YES];
     
     indexOfSelectedCell = index; 
     
@@ -540,6 +540,7 @@ static float ANIMATION_SPEED = 0.3f;
 {
     CGPoint pos = CGPointMake(columnWidth * index, 0);
     switch (scrollPosition) {
+        case UICarouselViewScrollPositionLeft: break; //XCode warnings clean up
         case UICarouselViewScrollPositionNone: [self scrollRectToVisible:CGRectMake(pos.x, pos.y, columnWidth, self.bounds.size.height) animated:animated];
             return;
         case UICarouselViewScrollPositionMiddle: pos.x += self.bounds.size.width / 2.0f - columnWidth / 2.0f;
@@ -563,7 +564,7 @@ static float ANIMATION_SPEED = 0.3f;
     UICarouselViewCell *cell = [self visibleCellForIndex:index];
     if (cell != nil) {
         UICarouselViewCell *newSelectedCell = [self visibleCellForIndex:index];
-        [newSelectedCell setSelected:YES animated:NO];
+        [newSelectedCell setSelected:YES animated:animated];
         indexOfSelectedCell = index; 
         
         //if ([delegate respondsToSelector:@selector(carouselView:didSelectCellAtIndex:)]) [delegate carouselView:self didSelectCellAtIndex:index];
